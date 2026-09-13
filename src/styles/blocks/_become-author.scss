@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../helpers" as *;
 @use "../variables" as *;
 
@@ -119,7 +120,7 @@
 
     @include hover {
       border-color: rgba($black-color, 0.15);
-      background-color: darken($grey-light-color, 2%);
+      background-color: color.adjust($grey-light-color, $lightness: -2%);
     }
 
     &-icon {
