@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+    <title>Aura - коллекция стикеров</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a href="/" class="header__logo logo">
+          <img
+            src="./src/assets/icons/logo.svg"
+            alt="Simple Logo"
+            width="100"
+            height="40"
+          />
+        </a>
+
+        <nav class="header__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="#" class="menu__link">Авторы</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Коллекции</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link">Сервисы</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="header__btn" type="button">Кошелёк</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h1 class="hero__title">Площадка для реализации криптостикеров</h1>
+            <div class="hero__actions">
+              <a href="#" class="hero__btn hero__btn--primary">Купить</a>
+              <a href="#" class="hero__btn hero__btn--secondary"
+                >Стать автором</a
+              >
+            </div>
+          </div>
+
+          <div class="hero__preview">
+            <img
+              src="./src/assets/images/hero-stickers.png"
+              alt="Криптостикеры Aura"
+              class="hero__img"
+              width="1025"
+              height="912"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="auction">
+        <div class="auction__container container">
+          <div class="auction__header">
+            <h2 class="auction__title">Аукцион</h2>
+            <div class="auction__badge">
+              <span class="auction__badge-dot"></span>
+              Live auction
+            </div>
+          </div>
+
+          <div class="auction__main-lot">
+            <div class="auction__image-wrapper">
+              <img
+                src="./src/assets/images/witcher-sticker.png"
+                alt="Witcherrr_3"
+                class="auction__main-img"
+              />
+            </div>
+
+            <div class="auction__info">
+              <div class="auction__author">
+                <img
+                  src="./src/assets/images/avatar.png"
+                  alt="Serge_VM222"
+                  class="auction__avatar"
+                />
+                <span class="auction__author-name">Serge_VM222</span>
+              </div>
+
+              <h3 class="auction__lot-title">Witcherrr_3 (xml_t5)</h3>
+
+              <div class="auction__card-box auction__card-box--bid">
+                <span class="auction__label">Ставка:</span>
+                <strong class="auction__value">0.10 ETH</strong>
+                <span class="auction__sub-value">$351.24</span>
+              </div>
+
+              <div class="auction__card-box auction__card-box--timer">
+                <span class="auction__label">Окончание через:</span>
+                <div class="auction__timer-wrapper">
+                  <div class="auction__timer">
+                    <div class="auction__timer-item">
+                      <span class="auction__timer-num">01</span>
+                      <span class="auction__timer-text">Час</span>
+                    </div>
+                    <div class="auction__timer-item">
+                      <span class="auction__timer-num">48</span>
+                      <span class="auction__timer-text">Мин</span>
+                    </div>
+                    <div class="auction__timer-item">
+                      <span class="auction__timer-num">47</span>
+                      <span class="auction__timer-text">Сек</span>
+                    </div>
+                  </div>
+                  <div class="auction__timer-icon">
+                    <div class="auction__timer-icon">
+                      <svg
+                        width="121"
+                        height="121"
+                        viewBox="0 0 121 121"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M60.3272 111.275C88.4647 111.275 111.275 88.4647 111.275 60.3272C111.275 32.1898 88.4647 9.37988 60.3272 9.37988C32.1898 9.37988 9.37985 32.1898 9.37985 60.3272C9.37985 88.4647 32.1898 111.275 60.3272 111.275Z"
+                          stroke="#717178"
+                          stroke-width="5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M60.3269 34.8535V60.3272L73.0637 73.064"
+                          stroke="#717178"
+                          stroke-width="5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="auction__btn" type="button">Сделать ставку</button>
+            </div>
+          </div>
+
+          <div class="auction__others">
+            <h3 class="auction__subtitle">Другие аукционы</h3>
+
+            <div class="auction__grid">
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-1.png"
+                    alt="Alien (green) e_e"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-1.png"
+                      alt="Frank.Nagval"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">Frank.Nagval</span>
+                  </div>
+                  <h4 class="auction-card__title">Alien (green) e_e</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">0.02 ETH</strong>
+                    <span class="auction-card__timer"
+                      >03 часа 25 мин 23 сек</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-2.png"
+                    alt="CoBRRRa"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-2.png"
+                      alt="CPH_777"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">CPH_777</span>
+                  </div>
+                  <h4 class="auction-card__title">CoBRRRa</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">0.5 ETH</strong>
+                    <span class="auction-card__timer">15 мин 03 сек</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-3.png"
+                    alt="Diamonds (4)"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-3.png"
+                      alt="sUpah_kiLLah"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">sUpah_kiLLah</span>
+                  </div>
+                  <h4 class="auction-card__title">Diamonds (4)</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">0.008 ETH</strong>
+                    <span class="auction-card__timer"
+                      >23 часа 05 мин 08 сек</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-4.png"
+                    alt="Holofobia-2"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-4.png"
+                      alt="ttgs"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">ttgs</span>
+                  </div>
+                  <h4 class="auction-card__title">Holofobia-2</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">1.0 ETH</strong>
+                    <span class="auction-card__timer"
+                      >01 час 15 мин 55 сек</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-5.png"
+                    alt="Baby Yoda 1"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-5.png"
+                      alt="Peppppe22"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">Peppppe22</span>
+                  </div>
+                  <h4 class="auction-card__title">Baby Yoda 1</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">0.2 ETH</strong>
+                    <span class="auction-card__timer"
+                      >01 час 28 мин 11 сек</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-6.png"
+                    alt="alien vs. predator (01)"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-6.png"
+                      alt="1300e1440"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">1300e1440</span>
+                  </div>
+                  <h4 class="auction-card__title">alien vs. predator (01)</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">0.09 ETH</strong>
+                    <span class="auction-card__timer"
+                      >08 часов 44 мин 43 сек</span
+                    >
+                  </div>
+                </div>
+              </article>
+
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-7.png"
+                    alt="IAMDECEPTICON"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-7.png"
+                      alt="Robert_Wward"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">Robert_Wward</span>
+                  </div>
+                  <h4 class="auction-card__title">IAMDECEPTICON</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">0.1 ETH</strong>
+                    <span class="auction-card__timer">55 мин 18 сек</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="auction-card">
+                <div class="auction-card__image-wrapper">
+                  <img
+                    src="./src/assets/images/sticker-8.png"
+                    alt="Ghostbusterrrrrrrs"
+                    class="auction-card__img"
+                  />
+                </div>
+                <div class="auction-card__content">
+                  <div class="auction-card__author">
+                    <img
+                      src="./src/assets/images/avatar-8.png"
+                      alt="ttgs"
+                      class="auction-card__avatar"
+                    />
+                    <span class="auction-card__author-name">ttgs</span>
+                  </div>
+                  <h4 class="auction-card__title">Ghostbusterrrrrrrs</h4>
+                  <div class="auction-card__footer">
+                    <strong class="auction-card__price">0.09 ETH</strong>
+                    <span class="auction-card__timer">18 мин 12 сек</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="auction__more-actions">
+              <a href="#" class="auction__more-btn">Все аукционы</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stickers">
+        <div class="stickers__container container">
+          <div class="stickers__header">
+            <h2 class="stickers__title">
+              <span class="stickers__fire">🔥</span> Новые стикеры
+            </h2>
+          </div>
+
+          <div class="stickers__slider">
+            <div class="stickers__item">
+              <div class="stickers__img-box stickers__img-box--gradient">
+                <img
+                  src="./src/assets/images/ghost-orange.png"
+                  alt="Orange Ghost"
+                />
+              </div>
+            </div>
+            <div class="stickers__item">
+              <div class="stickers__img-box stickers__img-box--silver">
+                <img
+                  src="./src/assets/images/ghost-green.png"
+                  alt="Green Ghost"
+                />
+              </div>
+            </div>
+            <div class="stickers__item">
+              <div class="stickers__img-box stickers__img-box--text">
+                <img
+                  src="./src/assets/images/parental-advisory.png"
+                  alt="Parental Advisory"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="stickers__pagination">
+            <button type="button" class="stickers__dot stickers__dot--active">
+              1
+            </button>
+            <button type="button" class="stickers__dot">2</button>
+            <button type="button" class="stickers__dot">3</button>
+            <button type="button" class="stickers__dot">4</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="subscribe">
+        <div class="subscribe__container container">
+          <div class="subscribe__content">
+            <h2 class="subscribe__title">
+              Будь в курсе новинок! Подпишись на рассылку!
+            </h2>
+
+            <form class="subscribe__form" action="#">
+              <div class="subscribe__input-group">
+                <input
+                  type="text"
+                  class="subscribe__input"
+                  placeholder="Имя"
+                  required
+                />
+              </div>
+              <div class="subscribe__input-group">
+                <input
+                  type="email"
+                  class="subscribe__input"
+                  placeholder="E-mail"
+                  required
+                />
+              </div>
+              <button type="submit" class="subscribe__btn">Подписаться</button>
+            </form>
+
+            <label class="subscribe__consent">
+              <input
+                type="checkbox"
+                class="subscribe__checkbox"
+                required
+                checked
+              />
+              <span class="subscribe__checkbox-custom"></span>
+              <span class="subscribe__consent-text"
+                >Согласен на обработку персональных данных</span
+              >
+            </label>
+          </div>
+
+          <div class="subscribe__preview">
+            <img
+              src="./src/assets/images/hands-collage.png"
+              alt="Aura Hands Collage"
+              class="subscribe__img"
+              width="788"
+              height="391"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="become-author">
+        <div class="become-author__container container">
+          <div class="become-author__card">
+            <div class="become-author__content">
+              <h2 class="become-author__title">Стать автором</h2>
+              <div class="become-author__text-box">
+                <p class="become-author__subtitle">
+                  Если ты художник или стремишься им стать — добро пожаловать к
+                  нам!
+                </p>
+                <p class="become-author__text">
+                  Отправь нам от трёх до пяти своих работ и напиши свой ник в
+                  телеграме. Если наши кураторы решат, что нам по пути, то мы
+                  обязательно свяжемся с тобой и обговорим условия
+                  сотрудничества! <strong>Удачи!</strong>
+                </p>
+              </div>
+              <div class="become-author__decor">
+                <img
+                  src="./src/assets/images/three-hands.png"
+                  alt="Декор руки"
+                  class="become-author__decor-img"
+                />
+              </div>
+            </div>
+
+            <form class="become-author__form" action="#">
+              <label class="become-author__upload">
+                <input
+                  type="file"
+                  class="become-author__file-input visually-hidden"
+                  multiple
+                  accept=".jpeg, .jpg, .png"
+                  required
+                />
+                <span class="become-author__upload-icon">
+                  <svg
+                    width="40"
+                    height="40"
+                    viewBox="0 0 40 40"
+                    fill="none"
+                    xmlns="http://w3.org"
+                  >
+                    <path
+                      d="M20 10V30M30 20H10"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+                <span class="become-author__upload-text"
+                  >Прикрепить работы (.jpeg / .png)</span
+                >
+              </label>
+
+              <div class="become-author__input-wrapper">
+                <input
+                  type="text"
+                  class="become-author__input"
+                  placeholder="@telegram_nickname"
+                  required
+                />
+              </div>
+
+              <button type="submit" class="become-author__btn">
+                Отправить
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="top-sales">
+        <div class="top-sales__container container">
+          <h2 class="top-sales__title">Топ продаж</h2>
+
+          <div class="top-sales__grid">
+            <article class="sales-card">
+              <div class="sales-card__image-wrapper">
+                <img
+                  src="./src/assets/images/top-1.png"
+                  alt="Holofobia1"
+                  class="sales-card__img"
+                />
+              </div>
+              <div class="sales-card__info">
+                <div class="sales-card__author">
+                  <img
+                    src="./src/assets/images/avatar-1.png"
+                    alt="ttgs"
+                    class="sales-card__avatar"
+                  />
+                  <span class="sales-card__author-name">ttgs</span>
+                </div>
+                <h3 class="sales-card__title">Holofobia1</h3>
+                <div class="sales-card__price-box">
+                  <strong class="sales-card__eth">4.70 ETH</strong>
+                  <span class="sales-card__usd">($16,873.47)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="sales-card">
+              <div class="sales-card__image-wrapper">
+                <img
+                  src="./src/assets/images/top-2.png"
+                  alt="Y.EEE"
+                  class="sales-card__img"
+                />
+              </div>
+              <div class="sales-card__info">
+                <div class="sales-card__author">
+                  <img
+                    src="./src/assets/images/avatar-2.png"
+                    alt="Tat_2"
+                    class="sales-card__avatar"
+                  />
+                  <span class="sales-card__author-name">Tat_2</span>
+                </div>
+                <h3 class="sales-card__title">Y.EEE</h3>
+                <div class="sales-card__price-box">
+                  <strong class="sales-card__eth">3.00 ETH</strong>
+                  <span class="sales-card__usd">($10,731.24)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="sales-card">
+              <div class="sales-card__image-wrapper">
+                <img
+                  src="./src/assets/images/top-3.png"
+                  alt="Baby Joda"
+                  class="sales-card__img"
+                />
+              </div>
+              <div class="sales-card__info">
+                <div class="sales-card__author">
+                  <img
+                    src="./src/assets/images/avatar-3.png"
+                    alt="Chris22"
+                    class="sales-card__avatar"
+                  />
+                  <span class="sales-card__author-name">Chris22</span>
+                </div>
+                <h3 class="sales-card__title">Baby Joda</h3>
+                <div class="sales-card__price-box">
+                  <strong class="sales-card__eth">2.00 ETH</strong>
+                  <span class="sales-card__usd">($7,121.04)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="sales-card">
+              <div class="sales-card__image-wrapper">
+                <img
+                  src="./src/assets/images/top-4.png"
+                  alt="Infinity_09"
+                  class="sales-card__img"
+                />
+              </div>
+              <div class="sales-card__info">
+                <div class="sales-card__author">
+                  <img
+                    src="./src/assets/images/avatar-4.png"
+                    alt="Oswaald"
+                    class="sales-card__avatar"
+                  />
+                  <span class="sales-card__author-name">Oswaald</span>
+                </div>
+                <h3 class="sales-card__title">Infinity_09</h3>
+                <div class="sales-card__price-box">
+                  <strong class="sales-card__eth">1.6109 ETH</strong>
+                  <span class="sales-card__usd">($5,762.32)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="sales-card">
+              <div class="sales-card__image-wrapper">
+                <img
+                  src="./src/assets/images/top-5.png"
+                  alt="Sadsadsad"
+                  class="sales-card__img"
+                />
+              </div>
+              <div class="sales-card__info">
+                <div class="sales-card__author">
+                  <img
+                    src="./src/assets/images/avatar-5.png"
+                    alt="Paul-22"
+                    class="sales-card__avatar"
+                  />
+                  <span class="sales-card__author-name">Paul-22</span>
+                </div>
+                <h3 class="sales-card__title">Sadsadsad</h3>
+                <div class="sales-card__price-box">
+                  <strong class="sales-card__eth">1.50 ETH</strong>
+                  <span class="sales-card__usd">($5,365.62)</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="sales-card">
+              <div class="sales-card__image-wrapper">
+                <img
+                  src="./src/assets/images/top-6.png"
+                  alt="Attntn"
+                  class="sales-card__img"
+                />
+              </div>
+              <div class="sales-card__info">
+                <div class="sales-card__author">
+                  <img
+                    src="./src/assets/images/avatar-6.png"
+                    alt="wardxxx"
+                    class="sales-card__avatar"
+                  />
+                  <span class="sales-card__author-name">wardxxx</span>
+                </div>
+                <h3 class="sales-card__title">Attntn</h3>
+                <div class="sales-card__price-box">
+                  <strong class="sales-card__eth">1.0 ETH</strong>
+                  <span class="sales-card__usd">($3,577.08)</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="top-sales__requirements requirements-block">
+            <div class="requirements-block__content">
+              <h4 class="requirements-block__title">
+                Для попадания в топ необходимо:
+              </h4>
+
+              <ul class="requirements-block__list">
+                <li class="requirements-block__item">
+                  <span
+                    class="requirements-block__icon requirements-block__icon--mint"
+                  >
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_8_104)">
+                        <path
+                          d="M29.3333 21.3333V5.33329C29.3333 3.86663 28.1333 2.66663 26.6666 2.66663H10.6666C9.19996 2.66663 7.99996 3.86663 7.99996 5.33329V21.3333C7.99996 22.8 9.19996 24 10.6666 24H26.6666C28.1333 24 29.3333 22.8 29.3333 21.3333ZM14.6666 16L17.3733 19.6133L21.3333 14.6666L26.6666 21.3333H10.6666L14.6666 16ZM2.66663 7.99996V26.6666C2.66663 28.1333 3.86663 29.3333 5.33329 29.3333H24V26.6666H5.33329V7.99996H2.66663Z"
+                          fill="#46F4DB"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8_104">
+                          <rect width="32" height="32" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span class="requirements-block__text"
+                    >Минимум пять опубликованных работ</span
+                  >
+                </li>
+
+                <li class="requirements-block__item">
+                  <span
+                    class="requirements-block__icon requirements-block__icon--mint"
+                  >
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_8_110)">
+                        <path
+                          d="M15.9866 2.66663C8.62663 2.66663 2.66663 8.63996 2.66663 16C2.66663 23.36 8.62663 29.3333 15.9866 29.3333C23.36 29.3333 29.3333 23.36 29.3333 16C29.3333 8.63996 23.36 2.66663 15.9866 2.66663ZM16 26.6666C10.1066 26.6666 5.33329 21.8933 5.33329 16C5.33329 10.1066 10.1066 5.33329 16 5.33329C21.8933 5.33329 26.6666 10.1066 26.6666 16C26.6666 21.8933 21.8933 26.6666 16 26.6666ZM20.6666 14.6666C21.7733 14.6666 22.6666 13.7733 22.6666 12.6666C22.6666 11.56 21.7733 10.6666 20.6666 10.6666C19.56 10.6666 18.6666 11.56 18.6666 12.6666C18.6666 13.7733 19.56 14.6666 20.6666 14.6666ZM11.3333 14.6666C12.44 14.6666 13.3333 13.7733 13.3333 12.6666C13.3333 11.56 12.44 10.6666 11.3333 10.6666C10.2266 10.6666 9.33329 11.56 9.33329 12.6666C9.33329 13.7733 10.2266 14.6666 11.3333 14.6666ZM16 23.3333C19.1066 23.3333 21.7466 21.3866 22.8133 18.6666H9.18663C10.2533 21.3866 12.8933 23.3333 16 23.3333Z"
+                          fill="#46F4DB"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8_110">
+                          <rect width="32" height="32" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span class="requirements-block__text"
+                    >Инвайт трём коллегам по цеху</span
+                  >
+                </li>
+
+                <li class="requirements-block__item">
+                  <span
+                    class="requirements-block__icon requirements-block__icon--mint"
+                  >
+                    <svg
+                      width="32"
+                      height="32"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_8_116)">
+                        <path
+                          d="M30.6667 16L27.4134 12.28L27.8667 7.36L23.0534 6.26667L20.5334 2L16 3.94667L11.4667 2L8.94671 6.25333L4.13337 7.33333L4.58671 12.2667L1.33337 16L4.58671 19.72L4.13337 24.6533L8.94671 25.7467L11.4667 30L16 28.04L20.5334 29.9867L23.0534 25.7333L27.8667 24.64L27.4134 19.72L30.6667 16ZM13.4534 22.2933L8.38671 17.2133L10.36 15.24L13.4534 18.3467L21.2534 10.52L23.2267 12.4933L13.4534 22.2933Z"
+                          fill="#46F4DB"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8_116">
+                          <rect width="32" height="32" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span class="requirements-block__text"
+                    >Верифицированный аккаунт</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="requirements-block__decor">
+              <div class="requirements-block__smile-wrapper">
+                <img
+                  src="./src/assets/images/smile-stack.png"
+                  alt="Смайлики"
+                  class="requirements-block__decor-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__container container">
+          <a href="/" class="footer__logo">
+            <span class="footer__logo-title">AURA</span>
+            <span class="footer__logo-subtitle">stickers collection</span>
+          </a>
+
+          <nav class="footer__nav">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Соглашение</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Лицензия</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">FAQ</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__container container">
+          <p class="footer__copy">AURA© | 2026</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="src/js/main.js" type="module"></script>
+  </body>
+</html>

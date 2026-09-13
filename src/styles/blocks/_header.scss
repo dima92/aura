@@ -1,0 +1,118 @@
+@use "../helpers" as *;
+@use "../variables" as *;
+
+.header {
+  width: 100%;
+
+  @include respond-to("tablet-sm") {
+    padding-bottom: 0;
+  }
+
+  &__container {
+    @include flex(row, space-between, center, null, wrap);
+    padding-block: to-rem(16);
+
+    @include respond-to("tablet-sm") {
+      padding-block: to-rem(12);
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    margin-right: to-rem(64);
+
+    @include respond-to("tablet-sm") {
+      margin-right: 0;
+    }
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    outline: none;
+    position: relative;
+    border-radius: to-rem(77);
+    padding: to-rem(14) to-rem(32);
+    background-color: $black-color;
+    border: 1px solid rgba($white-color, 0.15);
+    font-size: to-rem(16);
+    color: $white-color;
+    transition:
+      background-color,
+      color $transition-duration ease-in-out;
+
+    @include respond-to("tablet-sm") {
+      padding: to-rem(10) to-rem(24);
+      font-size: to-rem(14);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: to-rem(-6);
+      top: to-rem(-6);
+      border: 2px solid $primary-active-color;
+      border-radius: to-rem(77);
+      width: calc(100% + to-rem(12));
+      height: calc(100% + to-rem(12));
+      opacity: 0;
+    }
+
+    &:focus::after {
+      opacity: 1;
+    }
+
+    @include hover {
+      background-color: $primary-color;
+      color: $black-color;
+    }
+
+    &:active {
+      background-color: $primary-active-color;
+      color: $black-color;
+    }
+  }
+}
+
+.menu {
+  @include respond-to("tablet-sm") {
+    width: 100%;
+    order: 3;
+    border-top: 1px solid rgba($grey-dark-color, 0.3);
+    margin-top: to-rem(16);
+    padding-top: to-rem(16);
+  }
+
+  &__list {
+    @include flex(row, space-between, center, 32);
+
+    @include respond-to("tablet-sm") {
+      justify-content: center;
+      gap: to-rem(24);
+    }
+  }
+
+  &__link {
+    transition: color $transition-duration ease-in-out;
+
+    @include respond-to("tablet-sm") {
+      font-size: to-rem(15);
+    }
+
+    @include hover {
+      color: $primary-color;
+    }
+
+    &:focus {
+      outline: 2px solid $primary-active-color;
+      outline-offset: to-rem(6);
+    }
+
+    &:active {
+      color: $primary-active-color;
+    }
+  }
+}

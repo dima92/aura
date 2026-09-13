@@ -1,0 +1,33 @@
+@use "helpers/functions" as *;
+
+// Сетка
+$container-width: 1280;
+$container-padding-x: 15;
+
+// Анимации
+$transition-duration: 0.3s;
+$transition-base: all $transition-duration ease-in-out;
+
+// Шрифты
+$font-family: "Muller", sans-serif;
+$second-family: "Russo One", sans-serif;
+
+// ==========================================================================
+// ЦВЕТОВАЯ ПАЛИТРА (UI-KIT) — ПРОЕКТ AURA
+// ==========================================================================
+
+$black-color: #07060b;
+$grey-light-color: #ededf2;
+$red-color: #d13130;
+$white-color: #fff;
+$grey-dark-color: #717178;
+$grey-middle-color: #95959d;
+$primary-color: #46f4db;
+$primary-active-color: #57d272;
+$gray-deep-color: #37373e;
+$red-secondary-color: #ff6f6f;
+$gradient: linear-gradient(
+  180deg,
+  $primary-color 27.08%,
+  $primary-active-color 100%
+);

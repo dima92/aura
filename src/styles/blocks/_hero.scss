@@ -1,0 +1,146 @@
+@use "../helpers" as *;
+@use "../variables" as *;
+
+.hero {
+  position: relative;
+  background-color: $black-color;
+  padding-top: to-rem(140);
+  padding-bottom: to-rem(140);
+  min-height: to-rem(800);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  @include respond-to("desktop-sm") {
+    min-height: to-rem(700);
+  }
+
+  @include respond-to("tablet") {
+    padding-top: to-rem(60);
+    padding-bottom: to-rem(60);
+    min-height: auto;
+    display: block;
+  }
+
+  &__container {
+    position: relative;
+    @include flex(row, space-between, center);
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: to-rem(621);
+    @include flex(column, center, flex-start);
+
+    @include respond-to("tablet") {
+      max-width: 100%;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    font-family: $second-family;
+    @include fluid-text(70, 28, 1.05);
+    color: $white-color;
+    margin-bottom: to-rem(36);
+    text-transform: uppercase;
+    letter-spacing: to-rem(-1);
+
+    @include respond-to("tablet") {
+      margin-bottom: to-rem(24);
+      letter-spacing: 0;
+    }
+  }
+
+  &__actions {
+    @include flex(row, flex-start, center, 32);
+
+    @include respond-to("tablet") {
+      justify-content: center;
+      gap: to-rem(16);
+    }
+  }
+
+  &__btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: to-rem(25) to-rem(54);
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: to-rem(20);
+    border-radius: to-rem(40);
+    transition: $transition-base;
+
+    @include respond-to("mobile") {
+      padding: to-rem(18) to-rem(36);
+      font-size: to-rem(16);
+    }
+
+    &--primary {
+      background-color: $primary-color;
+      color: $black-color;
+
+      @include hover {
+        background-color: $primary-active-color;
+      }
+    }
+
+    &--secondary {
+      background-color: transparent;
+      color: $white-color;
+      border: 2px solid rgba($white-color, 0.2);
+
+      @include hover {
+        border-color: $primary-color;
+        background-color: $primary-color;
+        color: $black-color;
+      }
+    }
+  }
+
+  &__preview {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: to-rem(1025);
+    height: to-rem(912);
+    z-index: 1;
+    pointer-events: none;
+
+    @media (max-width: 1500px) {
+      width: to-rem(750);
+      height: auto;
+    }
+
+    @include respond-to("desktop-sm") {
+      width: to-rem(600);
+    }
+
+    @include respond-to("tablet") {
+      position: relative;
+      top: auto;
+      transform: none;
+      right: auto;
+      width: 100%;
+      height: auto;
+      margin-top: to-rem(40);
+      @include flex(row, center, center);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+    @include respond-to("tablet") {
+      max-width: to-rem(500);
+      height: auto;
+    }
+  }
+}

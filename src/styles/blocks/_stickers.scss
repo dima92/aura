@@ -1,0 +1,102 @@
+@use "../helpers" as *;
+@use "../variables" as *;
+
+.stickers {
+  background-color: $black-color;
+  padding-block: to-rem(90);
+
+  &__header {
+    margin-bottom: to-rem(32);
+  }
+
+  &__title {
+    font-family: $second-family;
+    @include fluid-text(60, 28);
+    color: $white-color;
+    @include flex(row, flex-start, center, 16);
+  }
+
+  &__fire {
+    font-style: normal;
+  }
+
+  &__slider {
+    @include flex(row, space-between, center, 32, wrap);
+    margin-bottom: to-rem(64);
+
+    @include respond-to("tablet") {
+      justify-content: center;
+      gap: to-rem(32);
+    }
+  }
+
+  &__item {
+    flex: 0 1 calc(33.333% - to-rem(22));
+    @include flex(row, center, center);
+
+    @include respond-to("tablet") {
+      flex: 0 1 to-rem(300);
+    }
+  }
+
+  &__img-box {
+    width: to-rem(300);
+    height: to-rem(300);
+    border-radius: 50%;
+    @include flex(row, center, center);
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &--gradient {
+      background: linear-gradient(135deg, #d8e653 0%, #f262a6 100%);
+    }
+
+    &--silver {
+      background-color: #c4c4c4;
+    }
+
+    &--text {
+      border-radius: 0;
+      height: auto;
+
+      img {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__pagination {
+    @include flex(row, center, center, 12);
+  }
+
+  &__dot {
+    width: to-rem(56);
+    height: to-rem(36);
+    border-radius: to-rem(40);
+    padding: to-rem(25);
+    background-color: transparent;
+    border: 2px solid $red-color;
+    color: $white-color;
+    font-family: $font-family;
+    font-size: to-rem(16);
+    font-weight: 700;
+    @include flex(row, center, center);
+    cursor: pointer;
+    transition: $transition-base;
+
+    @include hover {
+      border-color: $red-color;
+      color: $white-color;
+    }
+
+    &--active {
+      background-color: $red-color;
+      border-color: $red-color;
+    }
+  }
+}

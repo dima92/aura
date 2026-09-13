@@ -1,0 +1,195 @@
+@use "../helpers" as *;
+@use "../variables" as *;
+
+.become-author {
+  background-color: $white-color;
+  padding-block: to-rem(100);
+
+  @include respond-to("tablet") {
+    padding-block: to-rem(60);
+  }
+
+  &__card {
+    background-color: $white-color;
+    min-height: to-rem(556);
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: to-rem(32);
+    align-items: stretch;
+
+    @include respond-to("tablet") {
+      grid-template-columns: 1fr;
+      gap: to-rem(20);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: to-rem(140);
+
+    @include respond-to("tablet") {
+      padding-bottom: 0;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: $second-family;
+    font-size: to-rem(60);
+    font-weight: 400;
+    color: $black-color;
+    margin-bottom: to-rem(16);
+
+    @include respond-to("mobile") {
+      font-size: to-rem(36);
+    }
+  }
+
+  &__text-box {
+    font-family: $font-family;
+    font-size: to-rem(20);
+    font-weight: 400;
+    line-height: 1.5;
+    color: $black-color;
+    max-width: to-rem(624);
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    margin-bottom: to-rem(16);
+  }
+
+  &__text {
+    font-weight: 400;
+    color: rgba($black-color, 0.8);
+
+    strong {
+      font-weight: 700;
+      color: $black-color;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    left: to-rem(-20);
+    bottom: to-rem(-20);
+    width: to-rem(624);
+    height: auto;
+    z-index: 2;
+
+    @include respond-to("desktop-sm") {
+      width: to-rem(340);
+    }
+
+    @include respond-to("tablet") {
+      position: relative;
+      left: auto;
+      bottom: auto;
+      margin-top: to-rem(32);
+      max-width: to-rem(340);
+      width: 100%;
+    }
+  }
+
+  &__decor-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__form {
+    @include flex(column, flex-start, stretch, 32);
+    width: 100%;
+  }
+
+  &__upload {
+    background-color: $grey-light-color;
+    border-radius: to-rem(40);
+    padding: to-rem(40) to-rem(24);
+    min-height: to-rem(342);
+    @include flex(column, center, center, 16);
+    cursor: pointer;
+    border: 2px dashed transparent;
+    transition: $transition-base;
+
+    @include hover {
+      border-color: rgba($black-color, 0.15);
+      background-color: darken($grey-light-color, 2%);
+    }
+
+    &-icon {
+      width: to-rem(100);
+      height: to-rem(100);
+      border-radius: 50%;
+      background-color: $white-color;
+      color: $grey-light-color;
+      @include flex(row, center, center);
+    }
+
+    &-text {
+      font-family: $font-family;
+      font-size: to-rem(20);
+      font-weight: 400;
+      line-height: 1.5;
+      color: $grey-middle-color;
+      text-align: center;
+    }
+  }
+
+  &__input-wrapper {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: $grey-light-color;
+    border: 1px solid transparent;
+    color: $grey-dark-color;
+    font-family: $font-family;
+    font-size: to-rem(20);
+    font-weight: 400;
+    padding: to-rem(10) to-rem(10) to-rem(10) to-rem(32);
+    border-radius: to-rem(40);
+    outline: none;
+    transition: $transition-base;
+
+    &::placeholder {
+      color: $grey-middle-color;
+    }
+
+    &:focus {
+      background-color: $white-color;
+      border-color: rgba($black-color, 0.15);
+    }
+  }
+
+  &__btn {
+    align-self: flex-start;
+    min-width: to-rem(296);
+    padding: to-rem(25) to-rem(54);
+    background-color: $primary-color;
+    color: $black-color;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: to-rem(20);
+    border-radius: to-rem(40);
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: $transition-base;
+
+    @include hover {
+      background-color: $primary-active-color;
+    }
+
+    @include respond-to("tablet") {
+      align-self: center;
+      width: 100%;
+    }
+  }
+}

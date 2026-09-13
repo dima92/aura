@@ -1,0 +1,190 @@
+@use "../helpers" as *;
+@use "../variables" as *;
+
+.subscribe {
+  position: relative;
+  background-color: $red-color;
+  padding-block: to-rem(100);
+  min-height: to-rem(391);
+  @include flex(row, space-between, center);
+  overflow: hidden;
+
+  @include respond-to("tablet") {
+    padding-block: to-rem(60);
+    min-height: auto;
+  }
+
+  &__container {
+    position: relative;
+    @include flex(row, space-between, center);
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    max-width: to-rem(500);
+    width: 100%;
+    @include flex(column, center, flex-start);
+
+    @include respond-to("tablet") {
+      max-width: 100%;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    font-family: $second-family;
+    @include fluid-text(20, 16);
+    color: $white-color;
+    margin-bottom: to-rem(32);
+
+    @include respond-to("tablet") {
+      text-align: center;
+      margin-bottom: to-rem(28);
+    }
+  }
+
+  &__form {
+    width: 100%;
+    max-width: to-rem(460);
+    @include flex(column, center, flex-start, 16);
+    margin-bottom: to-rem(16);
+
+    @include respond-to("tablet") {
+      align-items: center;
+    }
+  }
+
+  &__input-group {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: $black-color;
+    color: $grey-light-color;
+    font-family: $font-family;
+    font-size: to-rem(20);
+    font-weight: 400;
+    padding: to-rem(10) to-rem(10) to-rem(10) to-rem(32);
+    border-radius: to-rem(40);
+    border: none;
+    outline: none;
+    transition: $transition-base;
+
+    &::placeholder {
+      color: $grey-dark-color;
+    }
+
+    &:focus {
+      border-color: $primary-color;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    padding: to-rem(18);
+    background-color: $primary-color;
+    color: $black-color;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: to-rem(20);
+    border-radius: to-rem(40);
+    border: none;
+    cursor: pointer;
+    transition: $transition-base;
+
+    @include hover {
+      background-color: $primary-active-color;
+    }
+  }
+
+  &__consent {
+    @include flex(row, flex-start, center, 10);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+
+    &:checked + .subscribe__checkbox-custom::before {
+      opacity: 1;
+    }
+  }
+
+  &__checkbox-custom {
+    width: to-rem(14);
+    height: to-rem(14);
+    border: 1px solid $white-color;
+    border-radius: to-rem(4);
+    position: relative;
+    flex-shrink: 0;
+
+    &::before {
+      content: "✓";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: $white-color;
+      font-size: to-rem(12);
+      font-weight: 700;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+  }
+
+  &__consent-text {
+    font-size: to-rem(12);
+    color: rgba($white-color, 0.8);
+    font-family: $font-family;
+  }
+
+  &__preview {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: to-rem(788);
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+
+    @media (max-width: 1400px) {
+      width: to-rem(500);
+    }
+
+    @include respond-to("desktop-sm") {
+      width: to-rem(400);
+    }
+
+    @include respond-to("tablet") {
+      position: relative;
+      top: auto;
+      bottom: auto;
+      right: auto;
+      width: 100%;
+      max-width: to-rem(400);
+      height: auto;
+      margin-top: to-rem(40);
+      @include flex(row, center, center);
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+  }
+}
